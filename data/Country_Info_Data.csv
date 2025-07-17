@@ -1,0 +1,235 @@
+,Country_name,area,capital,population,region
+0,Afghanistan,652230,Kabul,26023100,Asia
+1,Albania,28748,Tirana,2895947,Europe
+2,Algeria,2381741,Algiers,38700000,Africa
+3,American Samoa,199,Pago Pago,55519,Oceania
+4,Angola,1246700,Luanda,24383301,Africa
+5,Anguilla,91,The Valley,13452,Americas
+6,Antigua and Barbuda,442,Saint John's,86295,Americas
+7,Argentina,2780400,Buenos Aires,42669500,Americas
+8,Armenia,29743,Yerevan,3009800,Asia
+9,Aruba,180,Oranjestad,101484,Americas
+10,Australia,7692024,Canberra,23696900,Oceania
+11,Austria,83871,Vienna,8527230,Europe
+12,Azerbaijan,86600,Baku,9552500,Asia
+13,The Bahamas,13943,Nassau,319031,Americas
+14,Bahrain,765,Manama,1316500,Asia
+15,Bangladesh,147570,Dhaka,157486000,Asia
+16,Barbados,430,Bridgetown,285000,Americas
+17,Belarus,207600,Minsk,9475100,Europe
+18,Belgium,30528,Brussels,11225469,Europe
+19,Belize,22966,Belmopan,349728,Americas
+20,Benin,112622,Porto-Novo,9988068,Africa
+21,Bermuda,54,Hamilton,64237,Americas
+22,Bhutan,38394,Thimphu,755030,Asia
+23,Bolivia,1098581,Sucre,10027254,Americas
+24,Bosnia and Herzegovina,51209,Sarajevo,3791622,Europe
+25,Botswana,582000,Gaborone,2024904,Africa
+26,Brazil,8515767,Brasília,203586000,Americas
+27,British Indian Ocean Territory,60,Diego Garcia,3000,Africa
+28,Brunei,5765,Bandar Seri Begawan,393372,Asia
+29,Bulgaria,110879,Sofia,7245677,Europe
+30,Burkina Faso,272967,Ouagadougou,17322796,Africa
+31,Burundi,27834,Bujumbura,9530434,Africa
+32,Cambodia,181035,Phnom Penh,15184116,Asia
+33,Cameroon,475442,Yaoundé,20386799,Africa
+34,Canada,9984670,Ottawa,35540419,Americas
+35,Cape Verde,4033,Praia,518467,Africa
+36,Cayman Islands,264,George Town,55456,Americas
+37,Central African Republic,622984,Bangui,4709000,Africa
+38,Chad,1284000,N'Djamena,13211000,Africa
+39,Chile,756102,Santiago,17819054,Americas
+40,China,9640011,Beijing,1367110000,Asia
+41,Christmas Island,135,Flying Fish Cove,2072,Oceania
+42,Cocos (Keeling) Islands,14,West Island,550,Oceania
+43,Colombia,1141748,Bogotá,47907800,Americas
+44,Comoros,1862,Moroni,763952,Africa
+45,Republic of the Congo,342000,Brazzaville,4559000,Africa
+46,Democratic Republic of the Congo,2344858,Kinshasa,69360000,Africa
+47,Cook Islands,236,Avarua,14974,Oceania
+48,Costa Rica,51100,San José,4713168,Americas
+49,Ivory Coast,322463,Yamoussoukro,23821000,Africa
+50,Croatia,56594,Zagreb,4267558,Europe
+51,Cuba,109884,Havana,11210064,Americas
+52,Cyprus,9251,Nicosia,858000,Europe
+53,Czech Republic,78865,Prague,10521600,Europe
+54,Denmark,43094,Copenhagen,5655750,Europe
+55,Djibouti,23200,Djibouti,886000,Africa
+56,Dominica,751,Roseau,71293,Americas
+57,Dominican Republic,48671,Santo Domingo,10378267,Americas
+58,Ecuador,276841,Quito,15888900,Americas
+59,Egypt,1002450,Cairo,87668100,Africa
+60,El Salvador,21041,San Salvador,6401240,Americas
+61,Equatorial Guinea,28051,Malabo,1430000,Africa
+62,Eritrea,117600,Asmara,6536000,Africa
+63,Estonia,45227,Tallinn,1315819,Europe
+64,Ethiopia,1104300,Addis Ababa,87952991,Africa
+65,Falkland Islands,12173,Stanley,3000,Americas
+66,Faroe Islands,1393,Tórshavn,48605,Europe
+67,Fiji,18272,Suva,859178,Oceania
+68,Finland,338424,Helsinki,5470437,Europe
+69,France,640679,Paris,66078000,Europe
+70,French Guiana,,Cayenne,237549,Americas
+71,French Polynesia,4167,Papeetē,268270,Oceania
+72,French Southern and Antarctic Lands,7747,Port-aux-Français,140,
+73,Gabon,267668,Libreville,1711000,Africa
+74,The Gambia,11295,Banjul,1882450,Africa
+75,Georgia,69700,Tbilisi,4490500,Asia
+76,Germany,357114,Berlin,80783000,Europe
+77,Ghana,238533,Accra,27043093,Africa
+78,Gibraltar,6,Gibraltar,30001,Europe
+79,Greece,131990,Athens,10992589,Europe
+80,Greenland,2166086,Nuuk,56295,Americas
+81,Grenada,344,St. George's,103328,Americas
+82,Guadeloupe,,Basse-Terre,405739,Americas
+83,Guam,549,Hagåtña,159358,Oceania
+84,Guatemala,108889,Guatemala City,15806675,Americas
+85,Guernsey,78,St. Peter Port,63085,Europe
+86,Guinea,245857,Conakry,10628972,Africa
+87,Guinea-Bissau,36125,Bissau,1746000,Africa
+88,Guyana,214969,Georgetown,784894,Americas
+89,Haiti,27750,Port-au-Prince,10745665,Americas
+90,Heard Island and McDonald Islands,412,,0,
+91,Honduras,112492,Tegucigalpa,8725111,Americas
+92,Hong Kong,1104,City of Victoria,7234800,Asia
+93,Hungary,93028,Budapest,9879000,Europe
+94,Iceland,103000,Reykjavik,328170,Europe
+95,India,3287590,New Delhi,1263930000,Asia
+96,Indonesia,1904569,Jakarta,252164800,Asia
+97,Iran,1648195,Tehran,77966400,Asia
+98,Iraq,438317,Baghdad,36004552,Asia
+99,Ireland,70273,Dublin,6378000,Europe
+100,Israel,20770,Jerusalem,8268400,Asia
+101,Italy,301336,Rome,60769102,Europe
+102,Jamaica,10991,Kingston,2717991,Americas
+103,Japan,377930,Tokyo,127080000,Asia
+104,Jersey,116,Saint Helier,99000,Europe
+105,Jordan,89342,Amman,6666960,Asia
+106,Kazakhstan,2724900,Astana,17377800,Asia
+107,Kenya,580367,Nairobi,41800000,Africa
+108,Kiribati,811,South Tarawa,106461,Oceania
+109,North Korea,120538,Pyongyang,25027000,Asia
+110,South Korea,100210,Seoul,50423955,Asia
+111,Kuwait,17818,Kuwait City,3268431,Asia
+112,Kyrgyzstan,199951,Bishkek,5776570,Asia
+113,Laos,236800,Vientiane,6693300,Asia
+114,Latvia,64559,Riga,1991800,Europe
+115,Lebanon,10452,Beirut,4104000,Asia
+116,Lesotho,30355,Maseru,2098000,Africa
+117,Liberia,111369,Monrovia,4397000,Africa
+118,Libya,1759540,Tripoli,6253000,Africa
+119,Liechtenstein,160,Vaduz,37132,Europe
+120,Lithuania,65300,Vilnius,2927310,Europe
+121,Luxembourg,2586,Luxembourg,549700,Europe
+122,Macau,30,,631000,Asia
+123,Republic of Macedonia,25713,Skopje,2058539,Europe
+124,Madagascar,587041,Antananarivo,21842167,Africa
+125,Malawi,118484,Lilongwe,15805239,Africa
+126,Malaysia,330803,Kuala Lumpur,30430500,Asia
+127,Maldives,300,Malé,341256,Asia
+128,Mali,1240192,Bamako,15768000,Africa
+129,Malta,316,Valletta,416055,Europe
+130,Isle of Man,572,Douglas,84497,Europe
+131,Marshall Islands,181,Majuro,56086,Oceania
+132,Martinique,,Fort-de-France,386486,Americas
+133,Mauritania,1030700,Nouakchott,3545620,Africa
+134,Mauritius,2040,Port Louis,1261208,Africa
+135,Mayotte,,Mamoudzou,212645,Africa
+136,Mexico,1964375,Mexico City,119713203,Americas
+137,Federated States of Micronesia,702,Palikir,101351,Oceania
+138,Moldova,33846,Chișinău,3557600,Europe
+139,Monaco,2.02,Monaco,36950,Europe
+140,Mongolia,1564110,Ulan Bator,2987733,Asia
+141,Montserrat,102,Plymouth,4922,Americas
+142,Morocco,446550,Rabat,33465000,Africa
+143,Mozambique,801590,Maputo,25041922,Africa
+144,Namibia,825615,Windhoek,2113077,Africa
+145,Nauru,21,Yaren,10084,Oceania
+146,Nepal,147181,Kathmandu,27646053,Asia
+147,Netherlands,41850,Amsterdam,16881000,Europe
+148,New Caledonia,18575,Nouméa,268767,Oceania
+149,New Zealand,270467,Wellington,4547900,Oceania
+150,Nicaragua,130373,Managua,6134270,Americas
+151,Niger,1267000,Niamey,17138707,Africa
+152,Nigeria,923768,Abuja,178517000,Africa
+153,Niue,260,Alofi,1613,Oceania
+154,Norfolk Island,36,Kingston,2302,Oceania
+155,Northern Mariana Islands,464,Saipan,53883,Oceania
+156,Norway,323802,Oslo,5156450,Europe
+157,Oman,309500,Muscat,4089076,Asia
+158,Pakistan,881912,Islamabad,188410000,Asia
+159,Palau,459,Ngerulmud,20901,Oceania
+160,Panama,75417,Panama City,3713312,Americas
+161,Papua New Guinea,462840,Port Moresby,7398500,Oceania
+162,Paraguay,406752,Asunción,6893727,Americas
+163,Peru,1285216,Lima,30814175,Americas
+164,Philippines,342353,Manila,100697400,Asia
+165,Pitcairn Islands,47,Adamstown,56,Oceania
+166,Poland,312679,Warsaw,38496000,Europe
+167,Portugal,92090,Lisbon,10477800,Europe
+168,Puerto Rico,8870,San Juan,3615086,Americas
+169,Qatar,11586,Doha,2269672,Asia
+170,Réunion,,Saint-Denis,840974,Africa
+171,Romania,238391,Bucharest,19942642,Europe
+172,Russia,17124442,Moscow,146233000,Europe
+173,Rwanda,26338,Kigali,10996891,Africa
+174,Saint Helena,,Jamestown,4255,Africa
+175,Saint Kitts and Nevis,261,Basseterre,55000,Americas
+176,Saint Lucia,616,Castries,184000,Americas
+177,Saint Pierre and Miquelon,242,Saint-Pierre,6081,Americas
+178,Saint Vincent and the Grenadines,389,Kingstown,109000,Americas
+179,Samoa,2842,Apia,187820,Oceania
+180,San Marino,61,City of San Marino,32743,Europe
+181,São Tomé and Príncipe,964,São Tomé,187356,Africa
+182,Saudi Arabia,2149690,Riyadh,30770375,Asia
+183,Scotland,,,,
+184,Senegal,196722,Dakar,13508715,Africa
+185,Serbia,49037,Belgrade,7186862,Europe
+186,Seychelles,452,Victoria,89949,Africa
+187,Sierra Leone,71740,Freetown,6205000,Africa
+188,Singapore,710,Singapore,5469700,Asia
+189,Slovakia,49037,Bratislava,5415949,Europe
+190,Slovenia,20273,Ljubljana,2064966,Europe
+191,Solomon Islands,28896,Honiara,581344,Oceania
+192,Somalia,637657,Mogadishu,10806000,Africa
+193,South Africa,1221037,Pretoria,54002000,Africa
+194,South Georgia,,King Edward Point,30,Americas
+195,South Sudan,619745,Juba,11384393,Africa
+196,Spain,505992,Madrid,46507760,Europe
+197,Sri Lanka,65610,Colombo,20277597,Asia
+198,Sudan,1886068,Khartoum,37289406,Africa
+199,Suriname,163820,Paramaribo,534189,Americas
+200,Svalbard and Jan Mayen,,Longyearbyen,2562,Europe
+201,Swaziland,17364,Lobamba,1106189,Africa
+202,Sweden,450295,Stockholm,9737521,Europe
+203,Switzerland,41284,Bern,8183800,Europe
+204,Syria,185180,Damascus,22964324,Asia
+205,Taiwan,36193,Taipei,23424615,Asia
+206,Tajikistan,143100,Dushanbe,8161000,Asia
+207,Tanzania,945087,Dodoma,47421786,Africa
+208,Thailand,513120,Bangkok,64871000,Asia
+209,East Timor,14874,Dili,1172390,Asia
+210,Togo,56785,Lomé,6993000,Africa
+211,Tokelau,12,Fakaofo,1411,Oceania
+212,Tonga,747,Nuku'alofa,103252,Oceania
+213,Trinidad and Tobago,5130,Port of Spain,1328019,Americas
+214,Tunisia,163610,Tunis,10982754,Africa
+215,Turkey,783562,Ankara,76667864,Asia
+216,Turkmenistan,488100,Ashgabat,5838064,Asia
+217,Tuvalu,26,Funafuti,11323,Oceania
+218,Uganda,241550,Kampala,34856813,Africa
+219,Ukraine,603700,Kiev,42973696,Europe
+220,United Arab Emirates,83600,Abu Dhabi,9446000,Asia
+221,United Kingdom,242900,London,64105654,Europe
+222,United States,9629091,Washington D.C.,319259000,Americas
+223,Uruguay,181034,Montevideo,3404189,Americas
+224,Uzbekistan,447400,Tashkent,30492800,Asia
+225,Vanuatu,12189,Port Vila,264652,Oceania
+226,Venezuela,916445,Caracas,30206307,Americas
+227,Vietnam,331212,Hanoi,89708900,Asia
+228,Wales,,,,
+229,Wallis and Futuna,142,Mata-Utu,13135,Oceania
+230,Western Sahara,266000,El Aaiún,586000,Africa
+231,Yemen,527968,Sana'a,25956000,Asia
+232,Zambia,752612,Lusaka,15023315,Africa
+233,Zimbabwe,390757,Harare,13061239,Africa

@@ -276,10 +276,6 @@ class ArtistDataCollector:
         # Step 3: Enrich with Spotify data
         artist_df = self.enrich_with_spotify(artist_df)
         
-        # Step 4: Save data to CSV
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{DATA_DIR}/artists_{self.tag_query.replace(' ', '_')}_{self.number_of_artists}_{timestamp}.csv"
-        artist_df.to_csv(filename)
-        self.update_progress(f"Data saved to {filename}")
+        # No CSV output generation
         
         return artist_df, countries_df

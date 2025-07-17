@@ -143,61 +143,19 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
 async def send_progress(update: Update, context: ContextTypes.DEFAULT_TYPE, message: str) -> None:
     """Send progress updates to the user."""
-    user_id = update.effective_user.id
-    
-    # Initialize user data structure if not existing
-    if "current_phase" not in user_data.get(user_id, {}):
-        # Ensure user_id key exists
-        if user_id not in user_data:
-            user_data[user_id] = {}
-            
-        user_data[user_id]["current_phase"] = "Fetching"
-    
-    # Parse message to determine phase
-    if "Fetching" in message:
-        user_data[user_id]["current_phase"] = "Fetching Artists"
-    elif "Processing" in message:
-        user_data[user_id]["current_phase"] = "Cleaning Data"
-    elif "country" in message.lower():
-        user_data[user_id]["current_phase"] = "Geographic Analysis"
-    elif "Spotify" in message:
-        user_data[user_id]["current_phase"] = "Adding Streaming Data"
-    elif "saved" in message:
-        user_data[user_id]["current_phase"] = "Completing Analysis"
-    
-    # Create a simplified progress message
-    progress_text = f"🔍 Analyzing {user_data[user_id].get('genre', 'music')} artists:\n\n"
-    
-    # Add current phase info
-    progress_text += f"Current phase: {user_data[user_id]['current_phase']}\n"
-    progress_text += f"Details: {message}"
-    
-    # Send or update message
-    if not user_data[user_id].get("progress_message_id"):
-        msg = await update.message.reply_text(progress_text)
-        user_data[user_id]["progress_message_id"] = msg.message_id
-    else:
-        try:
-            await context.bot.edit_message_text(
-                progress_text,
-                chat_id=update.effective_chat.id,
-                message_id=user_data[user_id]["progress_message_id"]
-            )
-        except Exception as e:
-            logger.error(f"Failed to update progress message: {e}")
+    # Skip sending progress updates
+    # This effectively disables all the progress messages
+    pass
 
 async def process_data(update: Update, context: ContextTypes.DEFAULT_TYPE, genre: str, count: int) -> None:
     """Process data and show results."""
     user_id = update.effective_user.id
     
-    # Create data collector with progress callback
+    # Create data collector with progress callback that does nothing
     collector = ArtistDataCollector(genre, count)
     
-    async def progress_callback(message):
-        await send_progress(update, context, message)
-    
-    # Set up progress callback
-    collector.set_progress_callback(lambda msg: context.application.create_task(progress_callback(msg)))
+    # Set a silent progress callback
+    collector.set_progress_callback(lambda msg: None)
     
     try:
         # Run data collection
@@ -208,9 +166,6 @@ async def process_data(update: Update, context: ContextTypes.DEFAULT_TYPE, genre
                 f"Sorry, I couldn't find any {genre} artists. Try another genre?"
             )
             user_data[user_id]["state"] = "idle"
-            # Clean up any resources
-            if "progress_message_id" in user_data[user_id]:
-                del user_data[user_id]["progress_message_id"]
             return
         
         # Create visualizer
@@ -237,41 +192,6 @@ async def process_data(update: Update, context: ContextTypes.DEFAULT_TYPE, genre
             f"Please try again with a different genre or count."
         )
         user_data[user_id]["state"] = "idle"
-        # Clean up any resources
-        if "progress_message_id" in user_data[user_id]:
-            del user_data[user_id]["progress_message_id"]
-
-async def get_and_send_image(update: Update, context: ContextTypes.DEFAULT_TYPE, url: str) -> None:
-    """Fetch, resize and send an image to the user"""
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            # Process image
-            image = Image.open(BytesIO(response.content))
-            
-            # Calculate new height maintaining aspect ratio
-            max_width = 300
-            width_percent = max_width / float(image.size[0])
-            new_height = int(float(image.size[1]) * width_percent)
-            
-            # Resize image
-            image = image.resize((max_width, new_height), Image.Resampling.LANCZOS)
-            
-            # Convert to bytes
-            img_byte_arr = BytesIO()
-            image.save(img_byte_arr, format='PNG')
-            img_byte_arr.seek(0)
-            
-            # Send image
-            await context.bot.send_photo(
-                chat_id=update.effective_chat.id,
-                photo=img_byte_arr
-            )
-            return True
-        return None
-    except Exception as e:
-        logger.error(f"Error sending image: {e}")
-        return None
 
 async def send_top_artists(update: Update, context: ContextTypes.DEFAULT_TYPE, visualizer: ArtistVisualizer) -> None:
     """Send top artists with their images and Spotify URLs."""
@@ -280,16 +200,51 @@ async def send_top_artists(update: Update, context: ContextTypes.DEFAULT_TYPE, v
     await update.message.reply_text(f"Top {len(top_artists)} Artists with Spotify URLs and Images:")
     
     for i, (idx, row) in enumerate(top_artists.iterrows(), 1):
-        # Send artist info
+        # Check if image is available
+        image_available = pd.notna(row['spotify_image'])
+        
+        # Prepare message with artist info
         message = f"{i}. {row['name']}\n"
         message += f"🎵 Listen: {row['spotify_url']}\n"
         message += f"👥 Followers: {int(row['spotify_followers']):,}"
         
-        await update.message.reply_text(message)
-        
-        # Send artist image if available
-        if pd.notna(row['spotify_image']):
-            await get_and_send_image(update, context, row['spotify_image'])
+        # Send message with photo if available, or just text if not
+        if image_available:
+            # Get image bytes
+            try:
+                response = requests.get(row['spotify_image'])
+                if response.status_code == 200:
+                    # Process image
+                    image = Image.open(BytesIO(response.content))
+                    
+                    # Calculate new height maintaining aspect ratio
+                    max_width = 300
+                    width_percent = max_width / float(image.size[0])
+                    new_height = int(float(image.size[1]) * width_percent)
+                    
+                    # Resize image
+                    image = image.resize((max_width, new_height), Image.Resampling.LANCZOS)
+                    
+                    # Convert to bytes
+                    img_byte_arr = BytesIO()
+                    image.save(img_byte_arr, format='PNG')
+                    img_byte_arr.seek(0)
+                    
+                    # Send image with caption
+                    await context.bot.send_photo(
+                        chat_id=update.effective_chat.id,
+                        photo=img_byte_arr,
+                        caption=message
+                    )
+                else:
+                    # Fallback to text if image fetch fails
+                    await update.message.reply_text(message)
+            except Exception as e:
+                logger.error(f"Error processing image for {row['name']}: {e}")
+                await update.message.reply_text(message)
+        else:
+            # No image available, just send text
+            await update.message.reply_text(message)
 
 async def show_plot_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Show menu for selecting plots."""
